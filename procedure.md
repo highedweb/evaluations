@@ -7,6 +7,7 @@ Broadly, running evaluations consists of:
 * (for Annual) Manually enter data from paper responses
 * Extracting the response data from Survey Monkey
 * Creating excel reports from that data
+* Close the collectors on SurveyMonkey
 
 The first two steps are largely manual, for now, unfortunately.  Good times.
 
@@ -71,3 +72,7 @@ $ python smpy.py
 > make_xlsx_for_presenters()
 > exit
 ```
+
+## Close the collectors on Survey Monkey
+
+Each evaluation on Survey Monkey has one "web collector."  That should be disabled after the conference is over.
