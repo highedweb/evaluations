@@ -1,3 +1,4 @@
+# coding=utf-8
 # This program is checked in as-is, without any consideration for making it more modular or better organized.
 
 # TODO: make it more modular and better organized
@@ -5,13 +6,13 @@
 # TODO: handle blank answers on the likert stuff (and what about avg/stddev in excel?  does blank work for that?)
 
 # format: AN, NY, SC, MI, AL  then year.  Same as at the beginning of survey titles in Survey Monkey.
-conference_prefix = 'AN 2014'
+conference_prefix = 'AL 2015'
 # store the data downloaded from surveymonkey here
-persistence_filename = 'an-2014-data.pkl'
+persistence_filename = 'data/2015/al-2015-data.pkl'
 # output the resulting spreadsheet here
-excel_filename = 'an-2014-results.xlsx'
+excel_filename = 'data/2015/al-2015-results.xlsx'
 # and the version for presenters can go here
-presenter_excel_filename = 'an-2014-results-for-presenters.xlsx'
+presenter_excel_filename = 'data/2015/al-2015-results-for-presenters.xlsx'
 
 from IPython import embed
 from python_guides.guides.api_service import api_service
@@ -209,7 +210,7 @@ def make_xlsx():
     sheet_name = sheet_name.replace("'", "_")
     sheet_name = sheet_name.replace(",", "_")
     sheet_name = sheet_name.replace(" ", "_")
-    sheet_name = sheet_name.replace("…", "_")
+    #sheet_name = sheet_name.replace("…", "_")
     sheet_name = sheet_name.replace("!", "_")
     sheet_name = sheet_name.replace("[", "_")
     sheet_name = sheet_name.replace("]", "_")
@@ -279,7 +280,7 @@ def make_xlsx_for_presenters():
     sheet_name = sheet_name.replace("'", "_")
     sheet_name = sheet_name.replace(",", "_")
     sheet_name = sheet_name.replace(" ", "_")
-    sheet_name = sheet_name.replace("…", "_")
+    #sheet_name = sheet_name.replace("…", "_")
     sheet_name = sheet_name.replace("!", "_")
     sheet_name = sheet_name.replace("[", "_")
     sheet_name = sheet_name.replace("]", "_")

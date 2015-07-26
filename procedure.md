@@ -39,6 +39,7 @@ Remember those links we collected while creating the surveys?  Visit one and fil
 
 ```
 $ git clone https://github.com/SurveyMonkey/python_guides.git
+$ touch python_guides/__init__.py ; touch python_guides/guides/__init__.py
 $ virtualenv evals_venv
 $ . evals_venv/bin/activate
 $ pip install -r requirements.txt
@@ -51,7 +52,7 @@ $ pip install ipython
 2. Run the following
 ```
 $ export SM_API_KEY=xxx
-$ export SM_API_SECRET=yyy
+$ export SM_API_PASSWD=yyy
 $ . evals_venv/bin/activate
 $ python smpy.py
 
@@ -59,6 +60,8 @@ $ python smpy.py
 > persist()
 > exit
 ```
+
+Note: you get the SM_API_KEY from https://developer.surveymonkey.com/apps/mykeys and you get SM_API_PASSWD (which is an oauth2 access token) from their API console https://developer.surveymonkey.com/api_console using some of the other information on the /apps/mykeys page and your Client ID (which is the login name for developer.surveymonkey.com).  On the API Console choose "Custom Application" in the Application dropdown.
 
 ## Creating excel reports from that data
 
