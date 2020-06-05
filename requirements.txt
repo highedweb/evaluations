@@ -1,7 +1,7 @@
 GDAL==1.11.1
 httpie==0.6.0
 mercurial==2.6.3
-requests==1.2.3
+requests==2.20.0
 virtualenv==1.10.1
 wsgiref==0.1.2
 XlsxWriter==0.7.2
